@@ -112,7 +112,7 @@ export default {
   com_ui_of: 'of',
   com_ui_entries: 'Entries',
   com_ui_pay_per_call: 'Bring humanity back to AI conversations',
-  com_ui_new_footer: 'Again! Bringing humanity back to AI conversations!',
+  com_ui_new_footer: 'Again! Again! Bringing humanity back to AI conversations!',
   com_ui_enter: 'Enter',
   com_ui_submit: 'Submit',
   com_ui_none_selected: 'None selected',
