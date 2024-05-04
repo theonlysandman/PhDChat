@@ -33,7 +33,7 @@ jobs:
       #  ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
       #  ECR_REPOSITORY: phdchat
       #  IMAGE_TAG: ${{ steps.increment-git-tag.outputs.git-tag }}
-         IMAGE_TAG: latest
+        IMAGE_TAG: latest
       run: |
         #private docker
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
