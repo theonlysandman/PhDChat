@@ -34,5 +34,9 @@ jobs:
         ECR_REPOSITORY: phdchat
         IMAGE_TAG: ${{ steps.increment-git-tag.outputs.git-tag }}
       run: |
-        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        #private docker
+        #docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+        #docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        docker build -t public.ecr.aws/f4g4s3u1/phdchat:latest .
+        docker push public.ecr.aws/f4g4s3u1/phdchat:latest
+
