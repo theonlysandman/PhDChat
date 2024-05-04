@@ -30,12 +30,11 @@ jobs:
     - name: Build, Tag, and Push the Image to Amazon ECR
       id: build-image
       env:
-      #  ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-      #  ECR_REPOSITORY: phdchat
-      #  IMAGE_TAG: ${{ steps.increment-git-tag.outputs.git-tag }}
-        IMAGE_TAG: latest
+        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        ECR_REPOSITORY: phdchat
+        IMAGE_TAG: ${{ steps.increment-git-tag.outputs.git-tag }}
       run: |
         #private docker
-        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:v2 .
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
